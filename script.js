@@ -11,6 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let products = []; // Store fetched products
     let cart = JSON.parse(localStorage.getItem("cart")) || []; // Load cart from localStorage
 
+    document.addEventListener("DOMContentLoaded", () => {
+        const cartBtn = document.getElementById("cartBtn");
+        const cartSidebar = document.querySelector("aside");
+    
+        cartBtn.addEventListener("click", () => {
+            cartSidebar.classList.toggle("show-cart");
+        });
+    });
+    
+
     // Fetch product data from PHP API
     function fetchProducts() {
         fetch("http://localhost/storefront/products.php") // Update with correct path

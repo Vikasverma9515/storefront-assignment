@@ -1,27 +1,80 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Store</title>
+    <title>Charm Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <h1>Online Store</h1>
-        <input type="text" id="searchBox" placeholder="Search for products...">
+        <h1>🛒 Charm Store</h1>
+        <input type="text" id="searchBox" placeholder="🔍 Search products...">
         <select id="categoryFilter">
             <option value="all">All Categories</option>
             <option value="Snacks">Snacks</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Bakery">Bakery</option>
         </select>
-        <button id="sortLowHigh">Sort: Low to High</button>
-        <button id="sortHighLow">Sort: High to Low</button>
+        <button id="sortLowHigh">⬆️ Price: Low to High</button>
+        <button id="sortHighLow">⬇️ Price: High to Low</button>
+        <button id="cartBtn">🛒 Cart</button>
     </header>
 
+    <!-- Main Product Grid -->
     <main>
-        <div id="productList"></div>
+        <div id="productList" class="product-grid">
+            <!-- Sample Product Structure -->
+            <div class="product-card">
+                <img src="images/coca-cola.jpg" alt="Coca Cola">
+                <h3>Coca Cola</h3>
+                <p class="category">Category: Beverages</p>
+                <select>
+                    <option>Small Pack - ₹20</option>
+                    <option>Large Pack - ₹50</option>
+                </select>
+                <button class="addToCart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/doritos.jpg" alt="Doritos">
+                <h3>Doritos</h3>
+                <p class="category">Category: Snacks</p>
+                <select>
+                    <option>Small Pack - ₹20</option>
+                    <option>Large Pack - ₹40</option>
+                </select>
+                <button class="addToCart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/oreo.jpg" alt="Oreo Cookies">
+                <h3>Oreo Cookies</h3>
+                <p class="category">Category: Bakery</p>
+                <select>
+                    <option>Single Pack - ₹15</option>
+                    <option>Family Pack - ₹50</option>
+                </select>
+                <button class="addToCart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/lays.jpg" alt="Lays Chips">
+                <h3>Lays Chips</h3>
+                <p class="category">Category: Snacks</p>
+                <select>
+                    <option>Small Pack - ₹10</option>
+                    <option>Large Pack - ₹30</option>
+                </select>
+                <button class="addToCart">Add to Cart</button>
+            </div>
+        </div>
     </main>
 
+    <!-- Sidebar Shopping Cart -->
     <aside>
         <h2>Shopping Cart</h2>
         <ul id="cartList"></ul>
@@ -30,5 +83,6 @@
     </aside>
 
     <script src="script.js"></script>
+
 </body>
 </html>
