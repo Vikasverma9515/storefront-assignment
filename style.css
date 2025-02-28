@@ -1,4 +1,4 @@
-/* body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -34,4 +34,4 @@ input, select, button {
 .cart-item {
     display: flex;
     justify-content: space-between;
-} */
+}
